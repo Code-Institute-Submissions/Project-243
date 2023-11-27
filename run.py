@@ -1,18 +1,14 @@
 import random
 
 print("Want to play?")
-play_game = input("Can you step up? (yes/no): ").lower()
+play_game = input("Can you step up? (yes/no): \n").lower()
 
 if play_game == 'yes':
-    print("please enter your name: ")
+    print("please enter your name: \n")
     name = input()
-    print("Please can " + name + " enter the country they represent: ")
+    print("Please can " + name + " enter the country they represent: \n")
     nationality = input()
-    print("We have " + name + " from " + nationality + " stepping up for their nation!")
-    print("You have 5 shots, you need to score 3 or more to bring home the World Cup")
-    print("However if the computer saves 3 or more you let your country down!")
-    print("You will pick a number between 1-5, if you and the computer pick different numbers you score")
-    print("If you and the computer match numbers then the computer makes the save!")
+    print("We have " + name + " from " + nationality)
 
     player_goals = 0
     computer_saves = 0
@@ -24,19 +20,20 @@ if play_game == 'yes':
 
         player_choice = int(player_choice)
 
-        if player_choice not in [1,2,3,4,5]:
-            print("You need to enter either '1', '2', '3', '4', '5' in order to play!")
+        if player_choice not in [1, 2, 3, 4, 5]:
+            print("Incorrect")
             return game()
 
-        computer_choice = random.choice([1,2,3,4,5])
+        computer_choice = random.choice([1, 2, 3, 4, 5])
 
-        print(f"{name} + goes {player_choice}, computer has gone {computer_choice}")
+        print(f"{name} + goes {player_choice}"),
+        print(f"computer goes {computer_choice}")
 
         if player_choice == computer_choice:
             computer_saves += 1
             print("save")
         else:
-            player_goals +=1
+            player_goals += 1
             print("goal")
         return player_goals, computer_saves
 
@@ -64,5 +61,5 @@ if play_game == 'yes':
                 print("Computer wins")
         else:
             game()
-    else:
-        print("Okay")
+else:
+    print("Okay")
