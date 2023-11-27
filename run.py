@@ -30,7 +30,7 @@ if play_game == 'yes':
 
         computer_choice = random.choice([1,2,3,4,5])
 
-        print(name + " goes {player_choice}, computer has gone {computer_choice}")
+        print(f"{name} + goes {player_choice}, computer has gone {computer_choice}")
 
         if player_choice == computer_choice:
             computer_saves += 1
