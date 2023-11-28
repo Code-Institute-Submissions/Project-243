@@ -60,10 +60,12 @@ if play_game == 'yes':
         if player_goals >= 3 or computer_saves >= 3:
             print("That's all they needed!")
             if player_goals >= 3:
-                print(name + " has won it for " + nationality + "what a legend")
+                print(name + " has won it for " + nationality + " what a legend")
             else:
                 print("Computer breaks the hearts of " + nationality)
         else:
             game()
+
+
 else:
     print("Can't handle the heat get out of the kitchen!")
