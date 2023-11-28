@@ -9,6 +9,10 @@ if play_game == 'yes':
     print("Please can " + name + " enter the country they represent: \n")
     nationality = input()
     print("We have " + name + " from " + nationality)
+    print("Aim is to pick a number different to the computer to score. If you both match the computer saves,")
+    print("you can go 1 = top left, 2 = bottom left, 3 = middle, 4 = top right and 5 = bottom right.")
+    print("Please don't let your country down. Don't be a Harry Kane!")
+    print("Lets start with " + nationality + " vs Germany in a penalty shootout!!!")
 
     player_goals = 0
     computer_saves = 0
@@ -21,20 +25,20 @@ if play_game == 'yes':
         player_choice = int(player_choice)
 
         if player_choice not in [1, 2, 3, 4, 5]:
-            print("Incorrect")
+            print("Come on mate just pick a number between 1-5")
             return game()
 
         computer_choice = random.choice([1, 2, 3, 4, 5])
 
-        print(f"{name} + goes {player_choice}"),
-        print(f"computer goes {computer_choice}")
+        print(f"{name} has gone for {player_choice}"),
+        print(f"computer dives to {computer_choice}")
 
         if player_choice == computer_choice:
             computer_saves += 1
-            print("save")
+            print("Keeper with the SAVVVVEEEE!!!!!!!!")
         else:
             player_goals += 1
-            print("goal")
+            print(f"{name} with the GGGOOOOOAALLLLL")
         return player_goals, computer_saves
 
     def play_rounds(rounds):
@@ -56,10 +60,10 @@ if play_game == 'yes':
         if player_goals >= 3 or computer_saves >= 3:
             print("That's all they needed!")
             if player_goals >= 3:
-                print(name + " has won it for " + nationality)
+                print(name + " has won it for " + nationality + "what a legend")
             else:
-                print("Computer wins")
+                print("Computer breaks the hearts of " + nationality)
         else:
             game()
 else:
-    print("Okay")
+    print("Can't handle the heat get out of the kitchen!")
