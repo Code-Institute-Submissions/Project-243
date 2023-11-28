@@ -8,11 +8,11 @@ if play_game == 'yes':
     name = input()
     print("Please can " + name + " enter the country they represent: \n")
     nationality = input()
-    print("We have " + name + " from " + nationality)
-    print("Aim is to pick a number different to the computer to score. If you both match the computer saves,")
-    print("you can go 1 = top left, 2 = bottom left, 3 = middle, 4 = top right and 5 = bottom right.")
-    print("Please don't let your country down. Don't be a Harry Kane!")
-    print("Lets start with " + nationality + " vs Germany in a penalty shootout!!!")
+    print("We have " + name + " from " + nationality + "\n")
+    print("Aim is to pick a number different to the computer to score. If you both match the computer saves. \n")
+    print("you can go 1 = top left, 2 = bottom left, 3 = middle, 4 = top right and 5 = bottom right. \n")
+    print("Please don't let your country down. Don't be a Harry Kane! \n")
+    print("Lets start with " + nationality + " vs Germany in a penalty shootout!!! \n")
 
     player_goals = 0
     computer_saves = 0
