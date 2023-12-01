@@ -2,13 +2,32 @@ import random
 
 print(
     """
- ██████╗ ██╗   ██╗██╗ ██████╗██╗  ██╗    ███████╗██╗██████╗ ███████╗    ██████╗ ███████╗███╗   ██╗███████╗
-██╔═══██╗██║   ██║██║██╔════╝██║ ██╔╝    ██╔════╝██║██╔══██╗██╔════╝    ██╔══██╗██╔════╝████╗  ██║██╔════╝
-██║   ██║██║   ██║██║██║     █████╔╝     █████╗  ██║██████╔╝█████╗      ██████╔╝█████╗  ██╔██╗ ██║███████╗
-██║▄▄ ██║██║   ██║██║██║     ██╔═██╗     ██╔══╝  ██║██╔══██╗██╔══╝      ██╔═══╝ ██╔══╝  ██║╚██╗██║╚════██║
-╚██████╔╝╚██████╔╝██║╚██████╗██║  ██╗    ██║     ██║██║  ██║███████╗    ██║     ███████╗██║ ╚████║███████║
-╚══▀▀═╝  ╚═════╝ ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝    ╚═╝     ╚══════╝╚═╝  ╚═══╝╚══════╝
-
+████████▄   ███    █▄   ▄█   ▄████████    ▄█   ▄█▄
+███    ███  ███    ███ ███  ███    ███   ███ ▄███▀
+███    ███  ███    ███ ███▌ ███    █▀    ███▐██▀
+███    ███  ███    ███ ███▌ ███         ▄█████▀
+███    ███  ███    ███ ███▌ ███        ▀▀█████▄
+███    ███  ███    ███ ███  ███    █▄    ███▐██▄
+███  ▀ ███  ███    ███ ███  ███    ███   ███ ▀███▄
+ ▀██████▀▄█ ████████▀  █▀   ████████▀    ███   ▀█▀
+                                         ▀
+   ▄████████  ▄█     ▄████████    ▄████████
+  ███    ███ ███    ███    ███   ███    ███
+  ███    █▀  ███▌   ███    ███   ███    █▀
+ ▄███▄▄▄     ███▌  ▄███▄▄▄▄██▀  ▄███▄▄▄
+▀▀███▀▀▀     ███▌ ▀▀███▀▀▀▀▀   ▀▀███▀▀▀
+  ███        ███  ▀███████████   ███    █▄
+  ███        ███    ███    ███   ███    ███
+  ███        █▀     ███    ███   ██████████
+                    ███    ███
+   ▄███████▄    ▄████████ ███▄▄▄▄      ▄████████
+  ███    ███   ███    ███ ███▀▀▀██▄   ███    ███
+  ███    ███   ███    █▀  ███   ███   ███    █▀
+  ███    ███  ▄███▄▄▄     ███   ███   ███
+▀█████████▀  ▀▀███▀▀▀     ███   ███ ▀███████████
+  ███          ███    █▄  ███   ███          ███
+  ███          ███    ███ ███   ███    ▄█    ███
+ ▄████▀        ██████████  ▀█   █▀   ▄████████▀
     """)
 play_game = input("Can you step up? (yes/no): \n").lower()
 
@@ -18,11 +37,22 @@ if play_game == 'yes':
     print("Please can " + name + " enter the country they represent: \n")
     nationality = input()
     print("We have " + name + " from " + nationality + "\n")
-    print("Aim is to pick a number different to the computer in order to score. \n")
-    print("If you and the computer both have the same number the computer makes the saves. \n")
-    print("you can go 1 = top left, 2 = bottom left, 3 = middle, 4 = top right and 5 = bottom right. \n")
+    print("""
+    Aim is to pick a number different to
+    the computer in order to score.
+    \n""")
+    print("""
+    If you and the computer both have the same number
+    the computer makes the saves.
+    \n""")
+    print("""
+    you can go 1 = top left, 2 = bottom left,
+    3 = middle, 4 = top right and 5 = bottom right.
+    \n""")
     print("Please don't let your country down. Don't be a Harry Kane! \n")
-    print("Lets start with " + nationality + " vs Germany in a penalty shootout!!! \n")
+    print("Lets start with "
+    + nationality +
+    " vs Germany in a penalty shootout!!! \n")
 
     player_goals = 0
     computer_saves = 0
@@ -58,20 +88,21 @@ if play_game == 'yes':
         for _ in range(rounds):
             player_goals, computer_saves = game()
 
-
-    if __name__ == "__main__":
-        for _ in range(5):
-            game()
+        if __name__ == "__main__":
+            for _ in range(5):
+                game()
 
         if player_goals >= 3 or computer_saves >= 3:
             print("That's all they needed! \n")
             if player_goals >= 3:
-                print(name + " has won it for " + nationality + " what a legend")
+                print(name + """
+                has won it for """
+                + nationality + " what a legend")
             else:
                 print("Computer breaks the hearts of " + nationality)
         else:
             game()
 
-
 else:
     print("Can't handle the heat get out of the kitchen!")
+    exit()
