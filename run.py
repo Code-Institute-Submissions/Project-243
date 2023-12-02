@@ -88,20 +88,20 @@ if play_game == 'yes':
     print("""
     If you and the computer both have the same number
     the computer makes the saves.
-    \n""")
+    """)
     print("""
     However if you and the computer both pick different
     numbers then you score.
     """)
     print("""
     Example if you type 2 and computer types 3
-    you score however if you type 1 and the computer
-    types 1 then the computer makes the save.
+    you've scored a goal however if you type 1 and the
+    computer types 1 then the computer makes the save.
     """)
     print("""
     you can go 1 = top left, 2 = bottom left,
     3 = middle, 4 = top right and 5 = bottom right.
-    \n""")
+    """)
     print("Please don't let your country down. Don't be a Harry Kane! \n")
     print("Lets start with "
           + nationality + " vs Germany in a penalty shootout!!! \n")
@@ -110,9 +110,9 @@ if play_game == 'yes':
         player_goals = 0
         computer_saves = 0
         play_rounds(5)
-        play_again = input('Fancy another go? (yes/no)') == 'yes'.lower()
+        play_again = input("Fancy another go? (yes/no)") == 'yes'.lower()
     print("Thank you for playing")
 
 elif play_game == 'no':
-    print("Can't handle the heat get out of the kitchen!")
+    print("Okay then enjoy your day")
     exit()
