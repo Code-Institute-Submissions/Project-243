@@ -1,32 +1,74 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1>Quick-Fire-Pens</h1>
 
-Welcome,
+<h2>The Game</h2>
+Quick-Fire-Pens is a game that puts you up against the computer in a mini penalty shoot out.
+(link the project)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+<h2>How to play</h2>
 
-## Reminders
+You start off by filling out your name and the county you would like to represent. After this has been filled you are advise to pick a number between 1-5 and what each number means, 2 being bottom left for an example.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+The aim is to pick a number and try to pick a number that the computer (keeper) wouldn’t pick. If you pick 4 and the computer picks 2 you score, 4 being you’ve gone top right and 2 meaning the computer has gone bottom left. However if you both have a number that matches then the computer has made the save.
 
-## Creating the Heroku app
+You have 5 rounds and the aim is to score as many as you can. Once you have completed the 5 rounds a message will appear either calling you a legend or advising you that the computer has broken your country hearts.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+<h2>Design</h2>
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+The start of the game I have added inputs where the user can enter their name and the country they want to represent.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+![intro](https://github.com/JoshRudge22/Project-3/assets/139856712/cd2ebdbd-dff8-4021-ae5c-ece7c83f19cf)
 
-Connect your GitHub repository and deploy as normal.
+Once the info has been entered we go through the quick simple rules.
 
-## Constraints
+![Rules](https://github.com/JoshRudge22/Project-3/assets/139856712/cc1519de-0e0c-417f-9b5b-419483d8d052)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+Then we get into the game here we show what happens when the user scores a goal and when the computer makes a save.
 
----
+![save and goal](https://github.com/JoshRudge22/Project-3/assets/139856712/0016f4f0-5980-40ed-98d8-eb2da221d032)
 
-Happy coding!
+After the 5 rounds the player will get a message advising if they win or not and the chance to play the game again
+
+![End](https://github.com/JoshRudge22/Project-3/assets/139856712/1f68a969-798b-4a0b-b533-ea319a215348)
+
+I included Text to ASCII: The best ASCII Art Generator & Maker to give me a styled title.
+
+![Title](https://github.com/JoshRudge22/Project-3/assets/139856712/b39a4f43-4a2c-46f5-9a1b-ec721e90aeeb)
+
+There were also no requirements needed in order to run the game.
+
+<h2>Testing</h2>
+
+![CI Python Linter](https://github.com/JoshRudge22/Project-3/assets/139856712/cf5641e1-94d2-4623-af12-0b4ba099e036)
+
+<h2>Bugs/unresolved issues</h2>
+There is an issue where if you type anything other than a number it does break the code. Example typing a letter or symbol does cause the code to show an error. 
+
+![Error](https://github.com/JoshRudge22/Project-3/assets/139856712/53f1359d-1db8-4c08-abdc-7b4252ccb5cb)
+
+<h2>Deployment</h2>
+
+This project was deployed using Heroku.
+
+steps for deployment:
+
+Create a new Heroku app
+
+Set the builds to Python and NodeJS in that order
+
+Link the Heroku app to my repository
+
+Click Deploy
+
+<h2>Credits</h2>
+
+The Code Institute Love-Sandwiches Project and the battleships example.
+
+The (www.w3schools.com) website helped with trying to figure out how to use the correct code and how to get it to work for me.
+
+Slack chats 
+
+How to Generate a Random Number in Python | Python Central – gave me the idea to get the computer to pick a number a random number.
+
+My mentor Antoino who advised on area’s where it can improve.
+
